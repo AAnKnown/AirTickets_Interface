@@ -1,0 +1,28 @@
+.seat-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 50px); 
+    gap: 10px; 
+    justify-content: center;
+     margin: 20px 0; 
+}
+.seat { 
+    width: 45px; 
+    height: 45px; 
+    background-color: #e0e0e0;
+     border: 1px solid #999; 
+     cursor: pointer; 
+     border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold; 
+}
+.seat.selected { 
+    background-color: #28a745;
+     color: white; 
+}
+.seat:disabled { 
+    background-color: #ff4d4d; 
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <title>e-AirTickets - Check-in</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/forms.css">
+    <link rel="stylesheet" href="../CSS/airSeatMap.css">  
+    <link rel="icon" type="image/x-icon" href="../Assets/Images/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>e-AirTickets</h1>
+            <h4>AirContinental</h4>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="content-box">
+                <h2>3. Online Check-in</h2>
+                <label>Κωδικός Check-in (από SMS):</label>
+                <input type="text" id="checkinCode" placeholder="π.χ. AB1234" maxlength="6">
+
+                <button type="button" onclick="checkCheckinCode()">Επιβεβαίωση</button>
+
+                <div id="seatSection" style="display:none; margin-top:20px;">
+                    <h3>Επιλογή Θέσεων</h3>
+                    <p id="seatInfo" style="margin-bottom:10px; font-weight:bold;"></p>
+                    <div id="airplaneMap" class="seat-grid">
+                        </div>
+                    <button type="button" onclick="finalizeCheckin()">Έκδοση Εισιτηρίου</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 e-AirTickets TP4881 KOSTANTINOS BOURMPAKIS</p>
+    </footer>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

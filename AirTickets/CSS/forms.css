@@ -1,0 +1,80 @@
+.content-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto; /* Scroll μόνο μέσα στο πλαίσιο αν χρειαστεί */
+    text-align: center;
+}
+
+.content-box h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-btn, button {
+    background-color: white;
+    color: #28a745;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.menu-btn:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+/* Seat Grid */
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.seat {
+    aspect-ratio: 1;
+    border: 1px solid #999;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.seat.selected { background-color: #28a745; color: white; }
+.seat:disabled { background-color: #ff4d4d; }

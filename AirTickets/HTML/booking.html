@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <title>e-AirTickets - Κράτηση</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/forms.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/Images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>e-AirTickets</h1>
+            <h4>AirContinental</h4>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="content-box">
+                <h2>1. Υποβολή Αίτησης</h2>
+                <form id="bookingForm">
+                    <label>Όνομα :</label>
+                    <input type="text" id="firstName" placeholder="GEORGIOS" maxlength="25" required>
+
+                    <label>Επώνυμο :</label>
+                    <input type="text" id="lastName" placeholder="KOLOKITHOPOOLOS" maxlength="25" required>
+
+                    <label>Ημερομηνία Γέννησης :</label>
+                    <input type="date" id="birthDate" required>
+
+                    <label>Αριθμός Πτήσης (π.χ. AA1234567 για Αμερική):</label>
+                    <input type="text" id="flightNumber" placeholder="AA1234567" maxlength="9" required>
+
+                    <label>Διαβατήριο  :</label>
+                    <input type="text" id="passport" placeholder="AB1234567" maxlength="9" required>
+
+                    <label>Πλήθος Θέσεων (minimum = 1) :</label>
+                    <input type="number" id="seatsCount" min="1" required>
+
+                    <button type="button" onclick="submitBooking()">Έλεγχος Στοιχείων</button>
+                </form>
+
+                <div id="visaSection" style="display:none; margin-top:20px; border-top: 1px solid #ccc; padding-top:10px;">
+                    <h3>Έλεγχος Visa (NSA)</h3>
+                    <input type="text" id="visaCode" placeholder="9ψήφιος κωδικός" maxlength="9" required>
+                    <button type="button" onclick="finalVisaCheck()">Επιβεβαίωση & Πληρωμή</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 e-AirTickets TP4881 KOSTANTINOS BOURMPAKIS</p>
+    </footer>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
